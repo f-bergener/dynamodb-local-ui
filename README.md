@@ -4,4 +4,5 @@ Docker Compose File for running DynamoDB locally with a UI. Using [dynamodb-admi
 
 ## How to run
 
-Run `docker compose up -d` to start and `docker compose down` to stop
+- Install [Docker](https://www.docker.com/) on your computer
+- Run `docker compose up -d` to start and `docker compose down` to stop
