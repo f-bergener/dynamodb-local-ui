@@ -1,0 +1,13 @@
+services:
+  dynamodb-local:
+    image: amazon/dynamodb-local:latest
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
+  dynamodb-admin:
+    image: node:26.13.1-alpine
+    container_name: dybamodb-admin
+    ports:
+      - "8001:8001"
+    command: sh -c "npm install -g dynamodb-admin && dynamodb-admin --dynamo-endpoint=http://dynamodb-local:8000"
